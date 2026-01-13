@@ -1,6 +1,6 @@
 module crypto-news-intelligence
 
-go 1.24.0
+go 1.23
 
 require (
 	github.com/chromedp/chromedp v0.14.2
