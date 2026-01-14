@@ -1,4 +1,13 @@
- # ⚡ CYBER-NEWS-ENGINE V3
+ ---
+title: Cyber News Engine V3
+emoji: ⚡
+colorFrom: blue
+colorTo: purple
+sdk: docker
+pinned: false
+---
+
+# ⚡ CYBER-NEWS-ENGINE V3
 
 > **The Ultimate AI-Driven Crypto Intelligence Terminal.**
 
