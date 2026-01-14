@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"strings"
 	"sync"
 	"time"
@@ -61,7 +62,14 @@ func main() {
 	fs := http.FileServer(http.Dir("./web"))
 	http.Handle("/", fs)
 
-	log.Fatal(http.ListenAndServe(":8081", nil))
+	// Dynamically get port from Environment (for Cloud Hosting like Render)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8081"
+	}
+
+	fmt.Printf("✅ Server is LIVE on port %s\n", port)
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
 
 func runBackgroundScraper() {
